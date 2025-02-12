@@ -31,7 +31,7 @@ const userSchema = new Schema({
 
             },
             message: function () {
-                return 'enter valid email'
+                return 'enter valid email!'
             }
         }
     },
