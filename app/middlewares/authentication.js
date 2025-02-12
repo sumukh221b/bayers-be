@@ -6,7 +6,7 @@ const authenticateUser = (req, res, next) => {
     if (token) {
         token = token.split(' ')[1]
         try {
-            const tokenData = jwt.verify(token, 'dct123')
+            const tokenData = jwt.verify(token, 'abc321')
             User.findById(tokenData.id)
                 .then((user) => {
                     req.user = user
