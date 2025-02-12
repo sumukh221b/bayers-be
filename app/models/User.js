@@ -8,8 +8,6 @@ const Schema = mongoose.Schema
 const userSchema = new Schema({
     username: {
         type: String,
-        minlength: 6,
-        maxlength: 64,
     },
     contact: {
         type: String,
@@ -33,7 +31,7 @@ const userSchema = new Schema({
 
             },
             message: function () {
-                return 'enter valid email'
+                return 'enter valid email!'
             }
         }
     },

@@ -13,8 +13,8 @@ const authenticateUser = (req, res, next) => {
                     next()
                 })
         } catch (error) {
-            res.json({
-                error : 'page not found'
+            res.status(404).json({
+                error : "page not found!"
             })
         }
     }
