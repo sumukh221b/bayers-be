@@ -32,7 +32,8 @@ userCtrl.login = (req, res) => {
                         const tokenData = {
                             id : user._id,
                             username : user.username,
-                            email : user.email
+                            email : user.email,
+                            role: user.role
                         }
                         const token = jwt.sign(tokenData, 'abc321', {expiresIn: '10h'})
                         res.json({
