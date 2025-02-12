@@ -6,7 +6,7 @@ let passwordFormat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({
-    name: {
+    username: {
         type: String,
         minlength: 6,
         maxlength: 64,
