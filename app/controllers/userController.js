@@ -42,7 +42,8 @@ userCtrl.login = (req, res) => {
                         }
                         const token = jwt.sign(tokenData, 'abc321', {expiresIn: '10h'})
                         res.status(200).json({
-                            token : `Bearer ${token}`
+                            token : `Bearer ${token}`,
+                            code: 200
                         })
                     } else {
                         res.status(401).json({
